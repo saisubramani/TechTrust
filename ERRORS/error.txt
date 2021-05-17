@@ -1,0 +1,29 @@
+31/03/2021
+Code for basic and loadcell made in one code
+timer function 
+https://playground.arduino.cc/Code/Timer/
+error :
+
+/home/sai/gas_poroject/node_mcu_loadcell/node_mcu_loadcell.ino: In function 'void setup()':
+node_mcu_loadcell:49:31: error: no matching function for call to 'Timer::every(int, void (&)())'
+   tt.every(2000,loadcellModule);
+                               ^
+/home/sai/gas_poroject/node_mcu_loadcell/node_mcu_loadcell.ino:49:31: note: candidates are:
+In file included from /home/sai/gas_poroject/node_mcu_loadcell/node_mcu_loadcell.ino:5:0:
+/home/sai/Arduino/libraries/Timer-2.1/Timer.h:40:10: note: int8_t Timer::every(long unsigned int, void (*)(void*), void*)
+   int8_t every(unsigned long period, void (*callback)(void*), void* context);
+          ^
+/home/sai/Arduino/libraries/Timer-2.1/Timer.h:40:10: note:   candidate expects 3 arguments, 2 provided
+/home/sai/Arduino/libraries/Timer-2.1/Timer.h:41:10: note: int8_t Timer::every(long unsigned int, void (*)(void*), int, void*)
+   int8_t every(unsigned long period, void (*callback)(void*), int repeatCount, void* context);
+          ^
+/home/sai/Arduino/libraries/Timer-2.1/Timer.h:41:10: note:   candidate expects 4 arguments, 2 provided
+Multiple libraries were found for "HX711_ADC.h"
+ Used: /home/sai/Arduino/libraries/HX711_ADC-master
+ Not used: /home/sai/Downloads/arduino-1.8.13-linux64/arduino-1.8.13/libraries/HX711_ADC-master
+exit status 1
+no matching function for call to 'Timer::every(int, void (&)())'
+
+solution :
+
+Library download from master

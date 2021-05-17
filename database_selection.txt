@@ -1,0 +1,47 @@
+
+1.Identify the data needs for your solution:
+sai :   Loadcell-Weight
+	Gas sensor-Leakage value
+
+2.system configuration of the edge server?
+
+
+3.how much RAM and storage is available?
+
+4.What data processing and decision making is delegated to the edge servers?
+sai :	decision making is based on the gas sensor value (send notification)
+
+5.Is the cloud solution deployed in one region, or is it dispersed across multiple regions?
+sai :	In one region (dedicated instance)
+
+
+6.What is the volume of data transferred from the device to the edge server, and from the edge server to the central server?
+
+
+
+7.What is the estimate for the peak volume?
+sai :	No peak volume only two data gas_weight and gas alert
+
+
+8.What different formats of the data arrive from the devices, and what are the normalization, translation and filtering techniques applied on the data?
+
+
+
+9.Does the IoT solution control the devices or actuators? If yes, what device features are controlled by the IoT solution? Do they require a real-time response?
+sai :	No Actuators are used in the system
+
+
+10.What is the expected turnaround time to respond to any critical event?
+sai :	2s - 4s
+
+
+11.What are the real-time analytics computed from the incoming data?
+sai :	for now no real time analytics are needed.
+
+
+12.What are the business insights derived from the historical data?
+sai :	Usage of gas and tracking the demand of gas form client side.
+
+
+13.What are the external services that depend on the data?
+sai :	Mobile Notification and alert
